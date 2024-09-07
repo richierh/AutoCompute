@@ -4,3 +4,4 @@ dist
 build
 venv
 tes
+Model/sqlalchemy/*.json
