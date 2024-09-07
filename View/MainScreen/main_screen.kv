@@ -1,0 +1,34 @@
+<MainScreenView>
+    label_activate:label_activate
+    button_activate:button_activate
+    textfield_id:textfield_id
+    MDBoxLayout:
+        orientation: 'vertical' 
+        size_hint:.5,.5
+        pos_hint: {'center_x': 0.5,'center_y': 0.5}
+        MDBoxLayout:
+            size_hint:1,None 
+            orientation: 'vertical'
+            # MDLabel:
+            #     text:'Aplikasi AutoCompute'
+            #     font_size:60
+            #     halign:'center'
+            Image:
+                source: "assets/images/imglogo.jpg"
+                allow_stretch:True
+                size_hint:1,1
+        MDTextField:
+            id:textfield_id
+            hint_text:'Spreadsheet ID'
+            size_hint:1,None
+            mode:'rectangle'
+            pos_hint: {'center_x': 0.5,'center_y': 0.5}
+        MDLabel:
+            id:label_activate
+            size_hint:1,1
+            halign:'center'
+        MDRaisedButton:
+            id:button_activate
+            size_hint:1,1
+            text:'Start'
+            on_release:root.activate()
